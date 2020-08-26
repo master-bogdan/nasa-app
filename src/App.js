@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
-import './App.css';
+import { Header } from './components';
+import styled from 'styled-components';
+import Container from '@material-ui/core/Container';
 
 // const api = "https://api.nasa.gov/planetary/apod?api_key=pOWSgSWWiU2HNQSa6cnHqRsC2ZbACaxIwlz4HY6p";
+
+const Image = styled.img`
+    width: 100%;
+`;
 
 class App extends Component {
     constructor(props) {
@@ -27,8 +33,11 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <h1>{this.state.title}</h1>
-                <iframe width="560" height="315" src={this.state.pic} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+            <Header/>
+                <Container fixed>
+                    <h1>{this.state.title}</h1>
+                <Image src={this.state.pic} alt="alt"/>
+                </Container>
             </div>
         );
     }
