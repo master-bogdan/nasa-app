@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import Nav from '../Nav';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,8 +30,9 @@ export default function Header() {
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />
           </IconButton>
+          <Nav />
           <Typography variant="h6" className={classes.title}>
-            News
+            NASA REACT-REDUX APP
           </Typography>
           <Button color="inherit">Login</Button>
         </Toolbar>

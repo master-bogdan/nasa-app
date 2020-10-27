@@ -1,1 +1,2 @@
 export const FETCH_DAY_PHOTO = 'FETCH_DAY_PHOTO';
+export const SHOW_LOADING = 'SHOW_LOADING';
